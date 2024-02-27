@@ -1,20 +1,19 @@
-"use client";
+import { ServerRuntime } from "next";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import * as React from "react";
 
 interface ICountPageProps {}
 
-export const runtime = "edge";
+export const dynamicParams = false;
+export const dynamic = "force-static";
 
-const CountPage: React.FunctionComponent<ICountPageProps> = (props) => {
-  const params = useParams();
+const CountPage: React.FunctionComponent<ICountPageProps> = (props: any) => {
   return (
     <div>
-      {params?.count}
-
+      {props.params?.count}
       <button className="bg-red-400">
-        <Link shallow href={`/${(Number(params?.count?.toString()) || 0) + 1}`}>
+        <Link href={`/${(Number(props.params?.count?.toString()) || 0) + 1}`}>
           Click for next page
         </Link>
       </button>
