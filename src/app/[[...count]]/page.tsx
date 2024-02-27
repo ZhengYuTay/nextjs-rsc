@@ -3,7 +3,7 @@ import * as React from "react";
 
 interface ICountPageProps {}
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 export const dynamic = "error";
 
 const CountPage: React.FunctionComponent<ICountPageProps> = (props: any) => {
