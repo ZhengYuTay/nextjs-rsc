@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const dynamicParams = false;
 export const dynamic = "force-static";
+export const fetchCache = "only-cache";
 
 export const metadata: Metadata = {
   title: "Create Next App",

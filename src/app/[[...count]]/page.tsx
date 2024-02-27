@@ -5,6 +5,7 @@ interface ICountPageProps {}
 
 export const dynamicParams = false;
 export const dynamic = "force-static";
+export const fetchCache = "only-cache";
 
 const CountPage: React.FunctionComponent<ICountPageProps> = (props: any) => {
   return (
