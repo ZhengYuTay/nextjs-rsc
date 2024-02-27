@@ -5,6 +5,8 @@ import * as React from "react";
 
 interface ICountPageProps {}
 
+export const runtime = "edge";
+
 const CountPage: React.FunctionComponent<ICountPageProps> = (props) => {
   const params = useParams();
   return (
@@ -12,7 +14,7 @@ const CountPage: React.FunctionComponent<ICountPageProps> = (props) => {
       {params?.count}
 
       <button className="bg-red-400">
-        <Link href={`/${(Number(params?.count?.toString()) || 0) + 1}`}>
+        <Link shallow href={`/${(Number(params?.count?.toString()) || 0) + 1}`}>
           Click for next page
         </Link>
       </button>

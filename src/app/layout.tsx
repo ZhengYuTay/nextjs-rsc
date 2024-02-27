@@ -14,15 +14,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const test = await new Promise<string>((resolve) => {
-    setTimeout(() => resolve("test"), 500);
-  });
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div>from server: {test}</div>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
