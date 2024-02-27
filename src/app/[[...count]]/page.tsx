@@ -4,7 +4,7 @@ import * as React from "react";
 interface ICountPageProps {}
 
 export const dynamicParams = false;
-export const dynamic = "error";
+export const dynamic = "force-static";
 
 const CountPage: React.FunctionComponent<ICountPageProps> = (props: any) => {
   return (
